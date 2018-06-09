@@ -1,14 +1,14 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
 import EmployeeTable from './employee-table';
-import { Button, Message, Grid } from 'semantic-ui-react'
+import { Button, Message, Grid } from 'semantic-ui-react';
+import { fetchEmployees } from '../actions/employees';
 
 export class Dashboard extends React.Component {
     componentDidMount() {
-        
+        this.props.dispatch(fetchEmployees());    
     }
-
     render() {
         return (
             <div className="dashboard">
@@ -23,7 +23,7 @@ export class Dashboard extends React.Component {
                 </Message>
                 </Grid.Column>
             </Grid>
-                <EmployeeTable />
+                <EmployeeTable employees={this.props.employees} />
             </div>
         );
     }
@@ -34,7 +34,7 @@ const mapStateToProps = state => {
     return {
         username: state.auth.currentUser.username,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
-        
+        employees: state.employees.employees
     };
 };
 
