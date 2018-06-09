@@ -1,6 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Link, Redirect } from 'react-router-dom';
+import { Message } from 'semantic-ui-react'
 
 import LoginForm from './login-form';
 
@@ -14,7 +15,6 @@ export function LandingPage(props) {
         <div className="home">
             <h2>Welcome to HR Portal</h2>
             <LoginForm />
-            <Link to="/register">Register</Link>
         </div>
     );
 }
