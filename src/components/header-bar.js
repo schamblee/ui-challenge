@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 import { Image, Button } from 'semantic-ui-react'
+import { Link } from 'react-router-dom';
 
 export class HeaderBar extends React.Component {
     logOut() {
@@ -15,8 +16,8 @@ export class HeaderBar extends React.Component {
         let logOutButton;
         if (this.props.loggedIn) {
             logOutButton = (
-                <Button basic className="logout-btn" 
-                onClick={() => this.logOut()}>Log out</Button>
+                <Link to='/'><Button basic className="logout-btn" 
+                onClick={() => this.logOut()}>Log out</Button></Link>
             );
         }
         return (

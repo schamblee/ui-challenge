@@ -3,10 +3,9 @@ import { Table, Grid, Button, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
+import { deleteEmployee } from '../actions/employees'
 
 export class EmployeeTable extends React.Component {
-    componentDidMount() {   
-    }
     render() {
         console.log(this.props)
         let employees
@@ -22,10 +21,7 @@ export class EmployeeTable extends React.Component {
                 <Table.Cell textAlign='center'>{employee.department}</Table.Cell>
                 <Table.Cell textAlign='center'>{employee.title}</Table.Cell>
                 <Table.Cell textAlign='center'>
-                    <Icon color='teal' link name='edit' />
-                </Table.Cell>
-                <Table.Cell textAlign='center'>
-                    <Icon color='red' link name='delete' />
+                    <Link to={`/edit/${employee.id}`}><Icon color='teal' link name='edit' /></Link>
                 </Table.Cell>
             </Table.Row>
 
@@ -51,7 +47,6 @@ export class EmployeeTable extends React.Component {
                             <Table.HeaderCell textAlign='center'>Department</Table.HeaderCell>
                             <Table.HeaderCell textAlign='center'>Title</Table.HeaderCell>
                             <Table.HeaderCell textAlign='center'>Edit</Table.HeaderCell>
-                            <Table.HeaderCell textAlign='center'>Delete</Table.HeaderCell>
                         </Table.Row>
                         </Table.Header>
                         <Table.Body>

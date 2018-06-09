@@ -8,6 +8,7 @@ import Footer from './footer';
 import RegistrationPage from './registration-page';
 import {refreshAuthToken} from '../actions/auth';
 import NewEmployeeForm from './new-employee'
+import EditEmployeeForm from './edit-employee'
 
 export class App extends React.Component {
     componentDidUpdate(prevProps) {
@@ -47,6 +48,7 @@ export class App extends React.Component {
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/register" component={RegistrationPage} />
                 <Route exact path="/new-employee" component={NewEmployeeForm} />
+                <Route exact path="/edit/:id" component={EditEmployeeForm} />
                 <Footer />
             </div>
         );
