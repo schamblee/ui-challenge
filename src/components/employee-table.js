@@ -1,5 +1,5 @@
 import React from 'react'
-import { Table, Grid, Button } from 'semantic-ui-react'
+import { Table, Grid, Button, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
@@ -13,16 +13,20 @@ export class EmployeeTable extends React.Component {
         if(this.props.employees && this.props.employees.length) {
           employees = this.props.employees.map((employee, index) => (
             <Table.Row key={index}>
-                <Table.Cell>John Lilki</Table.Cell>
-                <Table.Cell>September 14, 2013</Table.Cell>
-                <Table.Cell>jhlilk22@yahoo.com</Table.Cell>
-                <Table.Cell>Phone Number</Table.Cell>
-                <Table.Cell>Address</Table.Cell>
-                <Table.Cell>Organization</Table.Cell>
-                <Table.Cell>Department</Table.Cell>
-                <Table.Cell>Title</Table.Cell>
-                <Table.Cell>Edit</Table.Cell>
-                <Table.Cell>Delete</Table.Cell>
+                <Table.Cell textAlign='center'>{employee.firstName}</Table.Cell>
+                <Table.Cell textAlign='center'>{employee.lastName}</Table.Cell>
+                <Table.Cell textAlign='center'>{employee.email}</Table.Cell>
+                <Table.Cell textAlign='center'>{employee.phoneNumber}</Table.Cell>
+                <Table.Cell textAlign='center'>{employee.address}</Table.Cell>
+                <Table.Cell textAlign='center'>{employee.organization}</Table.Cell>
+                <Table.Cell textAlign='center'>{employee.department}</Table.Cell>
+                <Table.Cell textAlign='center'>{employee.title}</Table.Cell>
+                <Table.Cell textAlign='center'>
+                    <Icon color='teal' link name='edit' />
+                </Table.Cell>
+                <Table.Cell textAlign='center'>
+                    <Icon color='red' link name='delete' />
+                </Table.Cell>
             </Table.Row>
 
           ));
@@ -38,16 +42,16 @@ export class EmployeeTable extends React.Component {
                     <Table singleLine>
                         <Table.Header>
                         <Table.Row>
-                            <Table.HeaderCell>Name</Table.HeaderCell>
-                            <Table.HeaderCell>Hire Date</Table.HeaderCell>
-                            <Table.HeaderCell>E-mail Address</Table.HeaderCell>
-                            <Table.HeaderCell>Phone Number</Table.HeaderCell>
-                            <Table.HeaderCell>Address</Table.HeaderCell>
-                            <Table.HeaderCell>Organization</Table.HeaderCell>
-                            <Table.HeaderCell>Department</Table.HeaderCell>
-                            <Table.HeaderCell>Title</Table.HeaderCell>
-                            <Table.HeaderCell>Edit</Table.HeaderCell>
-                            <Table.HeaderCell>Delete</Table.HeaderCell>
+                            <Table.HeaderCell textAlign='center'>Name</Table.HeaderCell>
+                            <Table.HeaderCell textAlign='center'>Hire Date</Table.HeaderCell>
+                            <Table.HeaderCell textAlign='center'>E-mail Address</Table.HeaderCell>
+                            <Table.HeaderCell textAlign='center'>Phone Number</Table.HeaderCell>
+                            <Table.HeaderCell textAlign='center'>Address</Table.HeaderCell>
+                            <Table.HeaderCell textAlign='center'>Organization</Table.HeaderCell>
+                            <Table.HeaderCell textAlign='center'>Department</Table.HeaderCell>
+                            <Table.HeaderCell textAlign='center'>Title</Table.HeaderCell>
+                            <Table.HeaderCell textAlign='center'>Edit</Table.HeaderCell>
+                            <Table.HeaderCell textAlign='center'>Delete</Table.HeaderCell>
                         </Table.Row>
                         </Table.Header>
                         <Table.Body>

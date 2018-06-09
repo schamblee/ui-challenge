@@ -13,8 +13,8 @@ export class Dashboard extends React.Component {
         return (
             <div className="dashboard">
             <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
-                <Grid.Column style={{ maxWidth: 1200 }}>
-                <Message className="welcome-message">
+                <Grid.Column style={{ maxWidth: 450 }}>
+                <Message color='teal' className="welcome-message">
                 <Message.Header>Welcome to the HR Portal!</Message.Header>
                     <div className="dashboard-username">
                         Username: {this.props.username}

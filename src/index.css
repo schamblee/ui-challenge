@@ -11,7 +11,7 @@
     background-color: #4eb6ae;
     padding-top: .8em;
     padding-bottom: .6em;
-    padding-left: 1em;
+    padding-left: 3em;
     color: #ffffff;
     margin-bottom: 50px;
 }
@@ -28,4 +28,24 @@
 
 .dashboard-username, .dashboard-name {
     text-align: center;
+}
+
+footer {
+    padding: 1.5em;
+    margin-top: 3em;
+    width: 100%;
+    background-color: rgba(0,0,0,.87);
+    color: #fff;
+    bottom: 0;
+    text-align: center;
+}
+
+.github-link, .linkedin-link {
+    width: 1.5em;
+    color: #fff;
+    margin-left: 10px
+}
+
+.home, .dashboard {
+    min-height: 500px;
 }

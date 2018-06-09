@@ -9,8 +9,8 @@ import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui
 
 export class NewEmployeeForm extends React.Component {
     onSubmit(values) {
-        const {firstName, lastName, hireDate, email, phoneNumber, address, organization, title} = values;
-        const employee = {firstName, lastName, hireDate, email, phoneNumber, address, organization, title};
+        const {firstName, lastName, hireDate, email, phoneNumber, address, organization, department, title} = values;
+        const employee = {firstName, lastName, hireDate, email, phoneNumber, address, organization, department, title};
         return this.props
             .dispatch(registerEmployee(employee))
     }
@@ -48,6 +48,12 @@ export class NewEmployeeForm extends React.Component {
                                 component={Input}
                                 type="text"
                                 name="email"
+                            />
+                            <label htmlFor="phoneNumber">Phone Number</label>
+                            <Field
+                                component={Input}
+                                type="text"
+                                name="phoneNumber"
                             />
                             <label htmlFor="address">Address</label>
                             <Field
