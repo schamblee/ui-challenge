@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, reduxForm, focus } from 'redux-form';
 import Input from './input';
 import { login } from '../actions/auth';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { required, nonEmpty } from '../validators';
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 
