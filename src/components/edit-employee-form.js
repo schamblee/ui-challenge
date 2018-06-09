@@ -92,7 +92,7 @@ export class EditEmployeeForm extends React.Component {
                                 name="title"
                             />
                             <Button color='teal' fluid size='large'>
-                                Register Employee
+                                Update Employee
                             </Button>
                             <Link to="/"><Button basic fluid size='large'>
                                 Cancel
