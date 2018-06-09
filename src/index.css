@@ -1,0 +1,23 @@
+.ui.image.logo {
+    max-width: .9em;
+    display: inline-block;
+}
+
+.form-error {
+    color: #e46d6d;
+}
+
+.header-bar {
+    background-color: #4eb6ae;
+    padding-top: .8em;
+    padding-bottom: .6em;
+    padding-left: 1em;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.logout-btn {
+    position: absolute;
+    right: 1.75em;
+    top: 1.2em;
+}

@@ -11,7 +11,6 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <h2>Welcome to HR Portal</h2>
             <LoginForm />
         </div>
     );
