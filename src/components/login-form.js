@@ -27,6 +27,11 @@ export class LoginForm extends React.Component {
                     <Header as='h2' color='teal' textAlign='center'>
                         <Image className='logo' src='https://images.vexels.com/media/users/3/143487/isolated/preview/7fe39483697e2065910f66e9dacafd7e-turquoise-tick-check-mark-by-vexels.png' /> Log-in to your account
                     </Header>
+                    <Message color='teal'>
+                        <h4>Demo Credentials</h4>
+                        <p>Username: demo </p>
+                        <p>Password: password123</p>
+                    </Message>
                     <Form size='large' className="login-form"
                             onSubmit={this.props.handleSubmit(values =>
                                 this.onSubmit(values)

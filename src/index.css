@@ -21,3 +21,11 @@
     right: 1.75em;
     top: 1.2em;
 }
+
+.ui.teal.button, .ui.teal.buttons .button {
+    margin-top: 1em;
+}
+
+.dashboard-username, .dashboard-name {
+    text-align: center;
+}
