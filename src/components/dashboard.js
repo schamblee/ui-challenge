@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
 import EmployeeTable from './employee-table';
-import { Button, Message, Grid } from 'semantic-ui-react';
+import { Message, Grid } from 'semantic-ui-react';
 import { fetchEmployees } from '../actions/employees';
 
 export class Dashboard extends React.Component {

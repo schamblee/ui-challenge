@@ -15,3 +15,11 @@ export const matches = field => (value, allValues) =>
     field in allValues && value.trim() === allValues[field].trim()
         ? undefined
         : 'Does not match';
+
+export const phoneFormatter = (number) => {
+    if (!number) return '';
+    // NNN-NNN-NNNN
+    const splitter = /.{1,3}/g;
+    number = number.substring(0, 10);
+    return number.substring(0, 7).match(splitter).join('-') + number.substring(7);
+    };

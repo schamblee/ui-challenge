@@ -1,11 +1,11 @@
 import React from 'react';
-import {Field, reduxForm, focus} from 'redux-form';
-import {registerEmployee} from '../actions/employees';
-import {login} from '../actions/auth';
+import { Field, reduxForm, focus } from 'redux-form';
+import { registerEmployee } from '../actions/employees';
 import Input from './input';
 import { Link } from 'react-router-dom';
-import {required, nonEmpty, matches, length} from '../validators';
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { required, nonEmpty } from '../validators';
+import normalizePhone from './normalizePhone'
+import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
 
 export class NewEmployeeForm extends React.Component {
     onSubmit(values) {
@@ -54,6 +54,8 @@ export class NewEmployeeForm extends React.Component {
                                 component={Input}
                                 type="text"
                                 name="phoneNumber"
+                                placeholder="Phone Number"
+                                normalize={normalizePhone}
                             />
                             <label htmlFor="address">Address</label>
                             <Field

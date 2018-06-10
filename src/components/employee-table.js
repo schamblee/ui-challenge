@@ -3,11 +3,9 @@ import { Table, Grid, Button, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-import { deleteEmployee } from '../actions/employees'
 
 export class EmployeeTable extends React.Component {
     render() {
-        console.log(this.props)
         let employees
         if(this.props.employees && this.props.employees.length) {
           employees = this.props.employees.map((employee, index) => (
