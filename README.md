@@ -1,5 +1,6 @@
 ## Demo
 
+- ![Live Demo](https://hr-portal.netlify.com/)
 - Demo username: demo
 - Demo password: password123
 
@@ -14,6 +15,8 @@ Add New Employee:
 ![Add New Employee](https://image.ibb.co/f8Eano/Screen_Shot_2018_06_10_at_5_52_38_AM.png)
 
 ## Built With
+
+![Backend Repo](https://github.com/schamblee/ui-challenge-server)
 
 Front-End:
 * React
